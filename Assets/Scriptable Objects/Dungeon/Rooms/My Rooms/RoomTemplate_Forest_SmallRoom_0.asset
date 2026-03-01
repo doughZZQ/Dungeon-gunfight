@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f809cfafb3f84942ba4760deb9f3394, type: 3}
+  m_Name: RoomTemplate_Forest_SmallRoom_0
+  m_EditorClassIdentifier: 
+  guid: 8852df0692c25104fb986148e8884a42
+  prefab: {fileID: 5589230650392134130, guid: 2a13ae7f70d83a04f82009601f0d7ac3, type: 3}
+  previousPrefab: {fileID: 5589230650392134130, guid: 2a13ae7f70d83a04f82009601f0d7ac3, type: 3}
+  roomNodeType: {fileID: 11400000, guid: 2d45456d753aff14385cbff946545fc9, type: 2}
+  lowerBounds: {x: -18, y: -16}
+  upperBounds: {x: 16, y: 18}
+  doorwayList:
+  - position: {x: -1, y: 18}
+    Orientation: 0
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: -5, y: 19}
+    doorwayCopyTileWidth: 9
+    doorwayCopyTileHeight: 10
+  - position: {x: -1, y: -16}
+    Orientation: 1
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: -5, y: -8}
+    doorwayCopyTileWidth: 9
+    doorwayCopyTileHeight: 9
+  - position: {x: -18, y: 1}
+    Orientation: 2
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: -18, y: 5}
+    doorwayCopyTileWidth: 9
+    doorwayCopyTileHeight: 9
+  - position: {x: 16, y: 1}
+    Orientation: 3
+    doorPrefab: {fileID: 0}
+    doorwayStartCopyPosition: {x: 8, y: 5}
+    doorwayCopyTileWidth: 9
+    doorwayCopyTileHeight: 9
+  spawnPositionArray:
+  - {x: -7, y: 7}
+  - {x: 5, y: 7}
+  - {x: -7, y: -5}
+  - {x: 5, y: -5}
+  - {x: -1, y: 1}

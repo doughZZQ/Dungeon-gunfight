@@ -28,6 +28,12 @@ public static class HelperUtilities
         bool error = false;
         int count = 0;
 
+        if (enumerableObjectToCheck == null)
+        {
+            Debug.Log("对象 " + thisObject.name.ToString() + " 中的 " + fieldName + "为 null ！");
+            return true;
+        }
+
         foreach (var item in enumerableObjectToCheck)
         {
             if (item == null)
@@ -49,4 +55,6 @@ public static class HelperUtilities
 
         return error;
     }
+
+
 }

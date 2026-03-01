@@ -36,7 +36,7 @@ public class RoomNodeSO : ScriptableObject
 
     public void Draw(GUIStyle roomNodeStyle)
     {
-        if (!roomNodeType.isEntrance && !isConnected)
+        if (!roomNodeType.isEntrance && !CheckIsConnected())
         {
             //使用 BeginArea 绘制节点框
             GUILayout.BeginArea(rect, roomNodeStyle);
@@ -65,6 +65,7 @@ public class RoomNodeSO : ScriptableObject
             EditorGUI.BeginChangeCheck();
 
             EditorGUILayout.LabelField(roomNodeType.roomNodeTypeName);
+            if (!isConnected) isConnected = true;
 
             if (EditorGUI.EndChangeCheck())
             {
@@ -317,6 +318,7 @@ public class RoomNodeSO : ScriptableObject
     public void SetIsConnected(bool flag)
     {
         isConnected = flag;
+        EditorUtility.SetDirty(this);
     }
 
     private string[] GetRoomNodeTypesToDisplay()
