@@ -4,7 +4,7 @@ using UnityEngine;
 public class Doorway // 入口 类
 {
     public Vector2Int position;
-    public Orientation Orientation;
+    public Orientation orientation;
     public GameObject doorPrefab;
 
     #region Header

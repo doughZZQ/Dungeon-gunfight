@@ -27,6 +27,21 @@ public class RoomNodeGraphSO : ScriptableObject
     }
 
     /// <summary>
+    /// 通过房间节点类型获取房间节点
+    /// </summary>
+    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)
+    {
+        foreach (RoomNodeSO node in roomNodeList)
+        {
+            if (node.roomNodeType == roomNodeType)
+            {
+                return node;
+            }
+        }
+        return null;
+    }
+
+    /// <summary>
     /// 通过房间节点ID获取房间节点
     /// </summary>
     public RoomNodeSO GetRoomNode(string roomNodeID)
@@ -37,6 +52,17 @@ public class RoomNodeGraphSO : ScriptableObject
         }
 
         return null;
+    }
+
+    /// <summary>
+    /// 获取给定父房间节点的子房间节点
+    /// </summary>
+    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)
+    {
+        foreach (string childNodeID in parentRoomNode.childRoomNodeIDList)
+        {
+            yield return GetRoomNode(childNodeID);
+        }
     }
 
 

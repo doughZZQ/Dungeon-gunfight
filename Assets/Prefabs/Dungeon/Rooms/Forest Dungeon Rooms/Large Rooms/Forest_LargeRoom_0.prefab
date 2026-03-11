@@ -263,9 +263,9 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -653709415
   m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.08845842, y: 0.3096053, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7783043859650507611}
   - component: {fileID: 1480650946023927575}
+  - component: {fileID: -8131635008573691062}
   m_Layer: 12
   m_Name: Forest_LargeRoom_0
   m_TagString: Untagged
@@ -351,6 +352,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 31.9161, y: 21.848186}
   m_EdgeRadius: 0
+--- !u!114 &-8131635008573691062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490891590550948231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1425dcdf254902f4c9feb0a8c5e54f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  groundTilemap: {fileID: 0}
+  decoration1Tilemap: {fileID: 0}
+  decoration2Tilemap: {fileID: 0}
+  frontTilemap: {fileID: 0}
+  collisionTilemap: {fileID: 0}
+  minimapTilemap: {fileID: 0}
+  roomColliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  environmentGameObject: {fileID: 0}
 --- !u!1 &1895972154693854697
 GameObject:
   m_ObjectHideFlags: 0
