@@ -39743,6 +39743,7 @@ GameObject:
   - component: {fileID: 510679471326756763}
   - component: {fileID: 5198479729189207010}
   - component: {fileID: -3968308782719664870}
+  - component: {fileID: 7019519786009553783}
   m_Layer: 12
   m_Name: Forest_BossRoom_0
   m_TagString: Untagged
@@ -39799,7 +39800,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.5189648, y: -1.4767685}
+  m_Offset: {x: 1.4639893, y: -1.4656506}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -39810,7 +39811,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 43.530987, y: 43.4466}
+  m_Size: {x: 58.374306, y: 58.49351}
   m_EdgeRadius: 0
 --- !u!114 &-3968308782719664870
 MonoBehaviour:
@@ -39835,6 +39836,18 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   environmentGameObject: {fileID: 0}
+--- !u!114 &7019519786009553783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5589230650392134130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a16e1569c3a9e241bb9d1628e32a7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6897130286706737227
 GameObject:
   m_ObjectHideFlags: 0

@@ -8367,6 +8367,7 @@ GameObject:
   - component: {fileID: 510679471326756763}
   - component: {fileID: 5198479729189207010}
   - component: {fileID: 2967005367932743756}
+  - component: {fileID: -5988921842962779196}
   m_Layer: 12
   m_Name: Forest_Entrance_0
   m_TagString: Untagged
@@ -8423,7 +8424,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.49304676, y: 1.5029097}
+  m_Offset: {x: 0.4930477, y: 1.5029097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8434,7 +8435,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.276562, y: 13.311176}
+  m_Size: {x: 28.529121, y: 28.563738}
   m_EdgeRadius: 0
 --- !u!114 &2967005367932743756
 MonoBehaviour:
@@ -8459,6 +8460,18 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   environmentGameObject: {fileID: 0}
+--- !u!114 &-5988921842962779196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5589230650392134130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a16e1569c3a9e241bb9d1628e32a7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6897130286706737227
 GameObject:
   m_ObjectHideFlags: 0

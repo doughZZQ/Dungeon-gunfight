@@ -107,7 +107,7 @@ public static class HelperUtilities
     {
         if (objectToCheck == null)
         {
-            Debug.Log(fieldName + " 为 null，并且必须在对象 " + thisObject.name.ToString() + " 中包含一个值");
+            Debug.Log(fieldName + " 为 null，并且必须在对象 " + thisObject.name.ToString() + " 中包含这个值");
             return true;
         }
         return false;

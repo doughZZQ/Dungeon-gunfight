@@ -125,6 +125,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             Debug.LogError("无法从指定的房间和节点图构建地牢！");
         }
 
+        StaticEventHandler.CallRoomChangedEvent(currentRoom);
+
         // Set player roughly mid-room
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, 
             (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f, 0f);

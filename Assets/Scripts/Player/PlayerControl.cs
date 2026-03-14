@@ -28,6 +28,9 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         waitForFixedUpdate0 = new WaitForFixedUpdate();
+
+        // Set player animation speed
+        SetPlayerAnimationSpeed();
     }
 
     private void Update()
@@ -39,6 +42,15 @@ public class PlayerControl : MonoBehaviour
         WeaponInput();
 
         PlayerRollCooldownTimer();
+    }
+
+    /// <summary>
+    /// Set player animator speed to match movement speed
+    /// </summary>
+    private void SetPlayerAnimationSpeed()
+    {
+        // Set animator speed to match movement speed
+        player.animator.speed = moveSpeed / Settings.baseSpeedForPlayerAnimations;
     }
 
     private void MovementInput()

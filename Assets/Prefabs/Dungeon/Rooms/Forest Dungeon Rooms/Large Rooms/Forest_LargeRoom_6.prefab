@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7783043859650507611}
   - component: {fileID: 1480650946023927575}
   - component: {fileID: -5571447578134787535}
+  - component: {fileID: 4027177594580444844}
   m_Layer: 12
   m_Name: Forest_LargeRoom_6
   m_TagString: Untagged
@@ -103,6 +104,18 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   environmentGameObject: {fileID: 0}
+--- !u!114 &4027177594580444844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490891590550948231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a16e1569c3a9e241bb9d1628e32a7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895972154693854697
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,17 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         // 加载房间节点类型列表
         LoadRoomNodeTypeList();
 
-        // 将淡化材质的 alpha 设置为 1f
+    }
+
+    private void OnEnable()
+    {
+        // Set dimmed material to off
+        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 0f);
+    }
+
+    private void OnDisable()
+    {
+        // Set dimmed material to fully visible
         GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1f);
     }
 

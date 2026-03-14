@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 7783043859650507611}
   - component: {fileID: 1480650946023927575}
   - component: {fileID: -2136359951092163335}
+  - component: {fileID: 3066450353030892381}
   m_Layer: 12
   m_Name: Forest_MediumRoom_0
   m_TagString: Untagged
@@ -339,7 +340,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.55807114, y: 1.4718919}
+  m_Offset: {x: 0.5180702, y: 1.5118885}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -350,7 +351,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 31.9161, y: 21.848186}
+  m_Size: {x: 48.475533, y: 38.567616}
   m_EdgeRadius: 0
 --- !u!114 &-2136359951092163335
 MonoBehaviour:
@@ -375,6 +376,18 @@ MonoBehaviour:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   environmentGameObject: {fileID: 0}
+--- !u!114 &3066450353030892381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490891590550948231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a16e1569c3a9e241bb9d1628e32a7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895972154693854697
 GameObject:
   m_ObjectHideFlags: 0
