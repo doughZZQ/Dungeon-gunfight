@@ -39,6 +39,16 @@ public static class HelperUtilities
     }
 
     /// <summary>
+    /// 从以度为单位的角度获取方向向量
+    /// </summary>
+    /// <returns></returns>
+    public static Vector3 GetDirectionVectorFromAngle(float angle)
+    {
+        Vector3 directionVector = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle), 0f);
+        return directionVector;
+    }
+
+    /// <summary>
     /// 从 angleDegrees 中获取 AimDirection 枚举值
     /// </summary>
     public static AimDirection GetAimDirection(float angleDegrees)
@@ -248,5 +258,16 @@ public static class HelperUtilities
         }
 
         return nearestSpawnPosition;
+    }
+
+    /// <summary>
+    /// 将线性音量标度转换为分贝
+    /// </summary>
+    public static float LinearToDecibels(int linear)
+    {
+        float linearScaleRange = 20f;
+
+        // 从线性尺度转换为对数分贝尺度的公式
+        return Mathf.Log10((float)linear / linearScaleRange) * 20f;
     }
 }

@@ -18,5 +18,16 @@ MonoBehaviour:
   playerHealthAmount: 100
   isImmuneAfterHit: 0
   hitImmunityTime: 0
+  startingWeapon: {fileID: 11400000, guid: ea30e6298f2520f46bac0612eae2819b, type: 2}
+  startingWeaponList:
+  - {fileID: 11400000, guid: ea30e6298f2520f46bac0612eae2819b, type: 2}
+  - {fileID: 11400000, guid: f501df1421f141d4aa7cd655aba025cb, type: 2}
+  - {fileID: 11400000, guid: f94490140349dab478aeb8cfe2b48cd5, type: 2}
+  - {fileID: 11400000, guid: f79878315343ff44a90ab8a05ce2d2ee, type: 2}
+  - {fileID: 11400000, guid: 0cf296ed837def14a9c8591681dc6735, type: 2}
+  - {fileID: 11400000, guid: d904c6b6d31450a4896a4471494e5855, type: 2}
+  - {fileID: 11400000, guid: 42929a20933a56243ba2cbf6f5163ed6, type: 2}
+  - {fileID: 11400000, guid: 92709418f23eb264c863985e88eb7330, type: 2}
+  - {fileID: 11400000, guid: 375a8080bdea3e84e8f8cb3785f9aae8, type: 2}
   playerMiniMapIcon: {fileID: 21300000, guid: 709f49100a0267f419aa33d571fb9d25, type: 3}
   playerHandSprite: {fileID: 21300000, guid: a8c352369ed75924d84743672d1ab512, type: 3}

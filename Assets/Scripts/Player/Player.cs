@@ -16,6 +16,14 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Idle))]
 [RequireComponent(typeof(AimWeaponEvent))]
 [RequireComponent(typeof(AimWeapon))]
+[RequireComponent(typeof(SetActiveWeaponEvent))]
+[RequireComponent(typeof(ActiveWeapon))]
+[RequireComponent(typeof(FireWeaponEvent))]
+[RequireComponent(typeof(FireWeapon))]
+[RequireComponent(typeof(WeaponFiredEvent))]
+[RequireComponent(typeof(ReloadWeapon))]
+[RequireComponent(typeof(ReloadWeaponEvent))]
+[RequireComponent(typeof(WeaponReloadedEvent))]
 [RequireComponent(typeof(MovementByVelocityEvent))]
 [RequireComponent(typeof(MovementByVelocity))]
 [RequireComponent(typeof(MovementToPositionEvent))]
@@ -33,8 +41,17 @@ public class Player : MonoBehaviour
 
     [HideInInspector] public IdleEvent idleEvent;
     [HideInInspector] public AimWeaponEvent aimWeaponEvent;
+    [HideInInspector] public SetActiveWeaponEvent setActiveWeaponEvent;
+    [HideInInspector] public ActiveWeapon activeWeapon;
+    [HideInInspector] public FireWeaponEvent fireWeaponEvent;
+    [HideInInspector] public WeaponFiredEvent weaponFiredEvent;
+    [HideInInspector] public ReloadWeaponEvent reloadWeaponEvent;
+    [HideInInspector] public WeaponReloadedEvent weaponReloadedEvent;
+
     [HideInInspector] public MovementByVelocityEvent movementByVelocityEvent;
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
+
+    public List<Weapon> weaponList = new List<Weapon>();
 
     private void Awake()
     {
@@ -44,6 +61,13 @@ public class Player : MonoBehaviour
 
         idleEvent = GetComponent<IdleEvent>();
         aimWeaponEvent = GetComponent<AimWeaponEvent>();
+        setActiveWeaponEvent = GetComponent<SetActiveWeaponEvent>();
+        activeWeapon = GetComponent<ActiveWeapon>();
+        fireWeaponEvent = GetComponent<FireWeaponEvent>();
+        weaponFiredEvent = GetComponent<WeaponFiredEvent>();
+        reloadWeaponEvent = GetComponent<ReloadWeaponEvent>();
+        weaponReloadedEvent = GetComponent<WeaponReloadedEvent>();
+
         movementByVelocityEvent = GetComponent<MovementByVelocityEvent>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
     }
@@ -56,6 +80,8 @@ public class Player : MonoBehaviour
         this.playerDetails = playerDetails;
 
         SetPlayerHealth();
+
+        CreatePlayerStartingWeapons();
     }
 
     /// <summary>
@@ -64,5 +90,39 @@ public class Player : MonoBehaviour
     private void SetPlayerHealth()
     {
         health.SetStartingHealth(playerDetails.playerHealthAmount);
+    }
+
+    /// <summary>
+    /// 设置玩家初始武器
+    /// </summary>
+    private void CreatePlayerStartingWeapons()
+    {
+        weaponList.Clear(); //清空武器列表
+
+        foreach (WeaponDetailsSO weaponDetails in playerDetails.startingWeaponList)
+        {
+            AddWeaponToPlayer(weaponDetails);
+        }
+    }
+
+    /// <summary>
+    /// 向玩家武器字典中添加武器
+    /// </summary>
+    private Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
+    {
+        Weapon weapon = new Weapon() { weaponDetails = weaponDetails, weaponReloadTimer = 0f, 
+            weaponClipRemainingAmmo = weaponDetails.weaponClipAmmoCapacity, 
+            weaponRemainingAmmo = weaponDetails.weaponAmmoCapacity, isWeaponReloading = false };
+
+        // Add the weapon to the list
+        weaponList.Add(weapon);
+
+        // Set weapon position in list
+        weapon.weaponListPosition = weaponList.Count;
+
+        // Set the added weapon as active
+        setActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
+
+        return weapon;
     }
 }

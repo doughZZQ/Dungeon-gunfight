@@ -52,4 +52,12 @@ public static class Settings
     public const string playerTag = "Player";
     public const string playerWeapon = "playerWeapon";
     #endregion
+
+    #region FIRING CONTROL
+    public const float useAimAngleDistance = 3.5f; //如果目标距离小于此值，则将使用瞄准角（由玩家计算），否则将使用武器瞄准角（根据武器计算）。
+    #endregion
+
+    #region UI PARAMETERS
+    public const float uiAmmoIconSpacing = 4f;
+    #endregion
 }

@@ -48,14 +48,14 @@ public class PlayerDetailsSO : ScriptableObject
     [Header("武器")]
     #endregion
     #region Tooltip
-    //[Tooltip("玩家初始启动武器")]
+    [Tooltip("玩家初始启动武器")]
     #endregion
-    //public WeaponDetailsSO startingWeapon;
+    public WeaponDetailsSO startingWeapon;
 
     #region Tooltip
-    //[Tooltip("填充起始武器列表")]
+    [Tooltip("填充起始武器列表")]
     #endregion
-    //public List<WeaponDetailsSO> startingWeaponList;
+    public List<WeaponDetailsSO> startingWeaponList;
 
     #region Header OTHER
     [Space(10)]
@@ -78,11 +78,11 @@ public class PlayerDetailsSO : ScriptableObject
         HelperUtilities.ValidateCheckEmptyString(this, nameof(playerCharacterName), playerCharacterName);
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerPrefab), playerPrefab);
         HelperUtilities.ValidateCheckPositiveValue(this, nameof(playerHealthAmount), playerHealthAmount, false);
-        //HelperUtilities.ValidateCheckNullValue(this, nameof(startingWeapon), startingWeapon);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(startingWeapon), startingWeapon);
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerMiniMapIcon), playerMiniMapIcon);
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerHandSprite), playerHandSprite);
         HelperUtilities.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
-        //HelperUtilities.ValidateCheckEnumerableValues(this, nameof(startingWeaponList), startingWeaponList);
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(startingWeaponList), startingWeaponList);
 
         if (isImmuneAfterHit)
         {

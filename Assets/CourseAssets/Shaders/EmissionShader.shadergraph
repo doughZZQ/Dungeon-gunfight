@@ -167,8 +167,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 1103.0,
-            "y": -410.0
+            "x": 1094.9998779296875,
+            "y": -458.9999694824219
         },
         "m_Blocks": [
             {
@@ -184,8 +184,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 1072.0,
-            "y": -161.99998474121095
+            "x": 1064.0,
+            "y": -210.99993896484376
         },
         "m_Blocks": [
             {
@@ -297,7 +297,7 @@
     "m_Guid": {
         "m_GuidSerialized": "9b016918-0a58-46a3-ad97-109149fabb92"
     },
-    "m_Name": "MainText",
+    "m_Name": "MainTex",
     "m_DefaultRefNameVersion": 0,
     "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Texture2D_9B2C7AF1",
@@ -561,7 +561,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "5d4e9a435063958d803319f89b1175e9",
     "m_Id": 0,
-    "m_DisplayName": "MainText",
+    "m_DisplayName": "MainTex",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

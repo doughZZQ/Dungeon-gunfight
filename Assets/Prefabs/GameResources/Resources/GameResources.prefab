@@ -47,6 +47,11 @@ MonoBehaviour:
   roomNodeTypeList: {fileID: 11400000, guid: 7719bf28f0f2af245af0af906a9ae98a, type: 2}
   playerDetailsList: []
   currentPlayer: {fileID: 11400000, guid: d9ea93b97649d344b9764c80ba6d2d4e, type: 2}
+  soundsMasterMixerGroup: {fileID: -4734643798044506327, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
+  doorOpenCloseSoundEffect: {fileID: 11400000, guid: 9f56005b594890341bed53abf8f4cde4, type: 2}
   dimmedMaterial: {fileID: 2100000, guid: fd5ae752e16da36428c7ae98c49dc19e, type: 2}
   litMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   variableLitShader: {fileID: -6465566751694194690, guid: d0fcfab02f8b48549a368e1e18d7b512, type: 3}
+  heartPrefab: {fileID: 0}
+  ammoIconPrefab: {fileID: 9169806857625429597, guid: 3b444aa69e8352a449e9a9477c48320a, type: 3}
+  scorePrefab: {fileID: 0}
